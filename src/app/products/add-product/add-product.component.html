@@ -1,0 +1,52 @@
+<div class="container-fluid card text-center text-white bg-dark mt-3">
+  <div class="card-header">AGREGAR</div>
+  <div class="card-body">
+    <h5 class="card-title">Tienda</h5>
+    <p class="card-text">
+      En esta sección podrás agregar un nuevo producto (Completar todos los
+      campos)
+    </p>
+    <form
+      class="form-signin"
+      [formGroup]="addProductForm"
+      (ngSubmit)="doSubmit()"
+    >
+      <label for="inputTipo" class="sr-only"
+        >Tipo (buzo, remera, campera o pantalón)</label
+      >
+      <input
+        class="form-control"
+        autocomplete="off"
+        id="inputTipo"
+        formControlName="tipo"
+        type="text"
+      />
+      <label for="inputCantidad" class="sr-only">Cantidad</label>
+      <input
+        class="form-control"
+        autocomplete="off"
+        id="inputCantidad"
+        formControlName="cantidad"
+        type="number"
+      />
+      <label for="inputPrecio" class="sr-only">Precio</label>
+      <input
+        class="form-control"
+        autocomplete="off"
+        id="inputPrecio"
+        formControlName="precio"
+        type="number"
+      />
+      <label for="inputDescripcion" class="sr-only">Descripcion</label>
+      <input
+        class="form-control"
+        id="inputDescripcion"
+        formControlName="descripcion"
+        type="text"
+      />
+      <button class="btn btn-primary btn-block mt-3" type="submit">
+        AGREGAR
+      </button>
+    </form>
+  </div>
+</div>

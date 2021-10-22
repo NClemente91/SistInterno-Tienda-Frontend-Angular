@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div class="container-home">
+  <h1>TIENDA DE ROPA</h1>
+  <h2 class="mt-5">
+    Sistema Interno creado para manejar los productos de una Tienda de Ropa.
+  </h2>
+  <div class="mt-5" *ngIf="!isLogged; else isLoggedTrue">
+    <a routerLink="/login/signin" class="btn btn-primary mt-4"
+      >INGRESAR AL SISTEMA</a
+    >
+    <br />
+    <a routerLink="/login/register" class="btn btn-primary mt-5">REGISTRARSE</a>
+    <br />
+  </div>
+</div>
+
+<ng-template #isLoggedTrue>
+  <h4 class="mt-5">Ya se encuentra logueado</h4>
+  <h4 class="mt-3">Ingrese a ver nuestros productos</h4>
+  <a routerLink="/products" class="btn btn-primary mt-4">VER PRODUCTOS</a>
+</ng-template>

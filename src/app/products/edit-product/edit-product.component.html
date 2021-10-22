@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+<div class="container card text-center text-white bg-dark mt-3">
+  <div class="card-header">EDITAR</div>
+  <div class="card-body">
+    <h5 class="card-title">Tienda</h5>
+    <p class="card-text">
+      En esta sección podrás editar un producto existente (Modificar los campos
+      que se deseen)
+    </p>
+    <form
+      class="form-signin"
+      [formGroup]="editProductForm"
+      (ngSubmit)="doSubmit()"
+    >
+      <label for="inputCantidad" class="sr-only">Cantidad</label>
+      <input
+        class="form-control"
+        autocomplete="off"
+        id="inputCantidad"
+        formControlName="cantidad"
+        type="number"
+      />
+      <label for="inputPrecio" class="sr-only">Precio</label>
+      <input
+        class="form-control"
+        autocomplete="off"
+        id="inputPrecio"
+        formControlName="precio"
+        type="number"
+      />
+      <label for="inputDescripcion" class="sr-only">Descripcion</label>
+      <input
+        class="form-control"
+        id="inputDescripcion"
+        formControlName="descripcion"
+        type="text"
+      />
+      <button class="btn btn-primary btn-block mt-3" type="submit">
+        EDITAR
+      </button>
+    </form>
+  </div>
+</div>

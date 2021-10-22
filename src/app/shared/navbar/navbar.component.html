@@ -1,0 +1,49 @@
+<div class="container-navbar">
+  <div>
+    <ul class="nav">
+      <li class="nav-item">
+        <a routerLink="/" class="nav-link"><h5>Tienda</h5></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/products" routerLinkActive="active"
+          >Productos</a
+        >
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="!isLogged; else isLoggedTrue">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login/signin" routerLinkActive="active"
+          >Sign In</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLink="/login/register"
+          routerLinkActive="active"
+          >Register</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>
+
+<ng-template #isLoggedTrue>
+  <div class="container-navbar-der">
+    <h6>Hola {{ userLogged }}!</h6>
+    <ul class="nav">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLink="/login/signin"
+          routerLinkActive="active"
+          (click)="doLogout()"
+        >
+          Salir
+        </a>
+      </li>
+    </ul>
+  </div>
+</ng-template>

@@ -1,0 +1,19 @@
+.container-navbar {
+  width: 95%;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-navbar-der {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container-navbar-der h6 {
+  height: 100%;
+  margin: auto;
+  color: #0d6efd;
+}

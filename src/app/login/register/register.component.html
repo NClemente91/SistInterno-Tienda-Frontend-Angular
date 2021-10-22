@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row">
+    <div
+      class="col mx-auto text-center text-white bg-dark mt-5"
+      id="container-register"
+    >
+      <h3 class="mt-3">Formulario de Registro</h3>
+      <form
+        class="form-signin"
+        [formGroup]="registerForm"
+        (ngSubmit)="doSubmit()"
+      >
+        <label for="inputNombre" class="sr-only">Nombre</label>
+        <input
+          class="form-control"
+          autocomplete="off"
+          id="inputNombre"
+          formControlName="nombre"
+          type="text"
+        />
+        <label for="inputApellido" class="sr-only">Apellido</label>
+        <input
+          class="form-control"
+          autocomplete="off"
+          id="inputApellido"
+          formControlName="apellido"
+          type="text"
+        />
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input
+          class="form-control"
+          autocomplete="off"
+          id="inputPassword"
+          formControlName="password"
+          type="password"
+        />
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input
+          class="form-control"
+          id="inputEmail"
+          formControlName="email"
+          type="email"
+        />
+        <button
+          class="btn btn-lg btn-primary btn-block mt-3 mb-3"
+          type="submit"
+        >
+          Registrarse
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

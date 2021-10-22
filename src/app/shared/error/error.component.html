@@ -1,0 +1,20 @@
+<div class="container card mb-3 mt-5" style="max-width: 540px" *ngIf="error">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img
+        src="https://cdn1.iconfinder.com/data/icons/ios-11-glyphs/30/error-512.png"
+        class="img-fluid rounded-start"
+        alt="Imagen de error"
+      />
+    </div>
+    <div class="col-md-8 text-center">
+      <div class="card-body">
+        <h2 class="card-title">Error: {{ error.status }}</h2>
+        <p class="card-text">Message: {{ error.message }}</p>
+        <button class="btn btn-secondary" (click)="returnPage()">
+          Volver al Home
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
