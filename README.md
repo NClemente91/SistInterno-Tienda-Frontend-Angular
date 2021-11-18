@@ -1,4 +1,7 @@
-# FinalPracticoAngular
+# Sistema Interno - Red de locales de venta de ropa
+
+## Preview
+![Image](https://github.com/NClemente91/SistInterno-Tienda-Frontend-Angular/blob/master/src/assets/Angular.gif)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
 
